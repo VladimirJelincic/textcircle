@@ -1,0 +1,34 @@
+<head>
+    <title>textcircle</title>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">TextCircle</a>
+        <p class="navbar-text">{{> loginButtons }}</p>
+
+
+    </div><!-- nav container-->
+</nav>
+<div class="container top-margin">
+    <div class="row">
+        <div class="col-md-6">
+            {{> editor}}
+        </div>
+
+        <div class="col-md-6">
+            {{> viewer}}
+        </div>
+
+    </div>
+</div>
+</body>
+<template name="editor">
+    {{>sharejsCM docid=docid id="editor" onRender=config}}
+</template>
+<template name="viewer">
+    <iframe id="viewer_iframe">
+
+    </iframe>
+</template>
